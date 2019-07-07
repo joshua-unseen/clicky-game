@@ -1,50 +1,62 @@
 [
     {
         "id": 1,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 2,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 3,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 4,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 5,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 6,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 7,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 8,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 9,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 10,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 11,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     },
     {
         "id": 12,
-        "clicked": false
+        "clicked": false,
+        "url": "https://via.placeholder.com/150"
     }
 ]
