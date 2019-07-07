@@ -20,9 +20,10 @@ class App extends React.Component {
     const tileArray = this.state.tiles;
 
     console.log(event.target);
-    const tIndx = tileArray.findIndex(el => el.id == event.target.id);
+    const tIndx = tileArray.findIndex(el => el.id == event.target.id);  // sloppy equivalence: HTML attributes are stored as strings, and I'm being lazy.
     console.log(tIndx);
     const theTile = tileArray[tIndx]
+
     if (theTile.clicked) {
       console.log("fail");
       tileArray.forEach(element => {
