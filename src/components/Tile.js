@@ -1,13 +1,11 @@
 import React from "react";
 
-class Tile extends React.Component {
-    state = {
-        clicked: false
-    }
-
-    render() {
-        return
-    }
+function Tile(props) {
+    return (
+        <div>
+            <p>This is tile {props.id}. It has {props.clicked ? "" : "not"} been clicked.</p>
+        </div>
+    );
 }
 
 export default Tile
