@@ -20,7 +20,7 @@ function renderTiles(tiles, clickHandler) {
 
 function Layout(props) {
     return (
-        <div className="container d-flex flex-wrap justify-content-center">
+        <div className={"container d-flex flex-wrap justify-content-center" + (props.lost ? " shaky" : "")}>
             {/* <p>This is the tile layout</p> */}
             {renderTiles(props.tiles, props.clickHandler)}
         </div>

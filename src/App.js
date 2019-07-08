@@ -11,7 +11,8 @@ class App extends React.Component {
   state = {
     tiles,
     score: 0,
-    hiScore: 0
+    hiScore: 0,
+    lost: false
   }
 
   clickHandler = (event) => {
@@ -29,7 +30,7 @@ class App extends React.Component {
       tileArray.forEach(element => {
         element.clicked = false;
       });
-      this.setState({tiles: tileArray, score: 0});
+      this.setState({tiles: tileArray, score: 0, lost: true});
     }
     else {
       console.log("nice");
@@ -38,7 +39,7 @@ class App extends React.Component {
       if (hiScore <= score) {
         hiScore = score;
       }
-      this.setState({tiles: tileArray, score, hiScore});
+      this.setState({tiles: tileArray, score, hiScore, lost: false});
     }
   }
 
@@ -48,7 +49,7 @@ class App extends React.Component {
       <div className="App">
         <Header score={this.state.score} hiScore={this.state.hiScore} />
         <Banner />
-        <Layout tiles={this.state.tiles} clickHandler={this.clickHandler} />
+        <Layout tiles={this.state.tiles} clickHandler={this.clickHandler} lost={this.state.lost} />
         <Footer />
       </div>
     );
