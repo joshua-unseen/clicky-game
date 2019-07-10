@@ -4,6 +4,7 @@
 .tile:hover {
     transform: scale(1.10);
 }
+
 @keyframes shaky {
     0% {transform: translate(0px);}
     25% {transform: translate(5px);}
@@ -16,6 +17,21 @@
     animation-iteration-count: 2;
     animation-direction: alternate;
 }
+@keyframes failText {
+    from {color: red}
+    to {color: inherit}
+}
+.fail {
+    animation: failText 0.5s;
+}
+@keyframes niceText {
+    from {color: green}
+    to {color: inherit}
+}
+.nice {
+    animation: niceText 0.5s;
+}
+
 @media (min-width: 1200px) {
     .container {
         max-width: 960px;
