@@ -13,7 +13,6 @@ class App extends React.Component {
     score: 0,
     hiScore: 0,
     lost: false,
-    headerText: "Click a Tile to Begin"
   }
 
   clickHandler = (event) => {
@@ -50,7 +49,7 @@ class App extends React.Component {
     console.log(this.state.tiles);
     return (
       <div className="App">
-        <Header headerText={this.state.headerText} score={this.state.score} hiScore={this.state.hiScore} />
+        <Header lost={this.state.lost} score={this.state.score} hiScore={this.state.hiScore} />
         <Banner />
         <Layout tiles={this.state.tiles} clickHandler={this.clickHandler} lost={this.state.lost} />
         <Footer />
