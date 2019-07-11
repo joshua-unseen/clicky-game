@@ -7,7 +7,8 @@ class Header extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log(this.props)
+        console.log(this.props);
+        console.log(prevProps);
         if (this.props !== prevProps) {
             if (this.props.lost) {
                 this.setState({ headerClass: "fail", headerText: "Fail!" });
@@ -32,22 +33,5 @@ class Header extends React.Component {
         );
     }
 }
-// function Header(props) {
-//     let headerClass = "";
-
-//     if (props.lost) {
-//         headerClass = "fail";
-//     }
-//     else if (props.score) {
-//         headerClass = "nice";
-//     }
-//     return (
-//         <div className="navbar sticky-top text-light bg-primary">
-//             <h1>Clicky Game</h1>
-//             <h3 className={headerClass}>Click a Tile to Begin</h3>
-//             <h5>Score: {props.score} | High Score: {props.hiScore}</h5>
-//         </div>
-//     );
-// }
 
 export default Header

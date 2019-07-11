@@ -1,5 +1,5 @@
 import React from 'react';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 // import './App.css';
 import tiles from "./tiles.json"
 import Header from './components/Header';
@@ -52,7 +52,7 @@ class App extends React.Component {
         <Header lost={this.state.lost} score={this.state.score} hiScore={this.state.hiScore} />
         <Banner />
         <Layout tiles={this.state.tiles} clickHandler={this.clickHandler} lost={this.state.lost} />
-        <Footer />
+        <Footer logo={logo} />
       </div>
     );
   }
