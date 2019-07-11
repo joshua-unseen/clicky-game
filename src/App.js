@@ -16,25 +16,25 @@ class App extends React.Component {
   }
 
   clickHandler = (event) => {
-    console.log("+++ clickHandler +++");
+    // console.log("+++ clickHandler +++");
     let score = this.state.score;
     let hiScore = this.state.hiScore;
     const tileArray = this.state.tiles;
 
-    console.log(event.target);
+    // console.log(event.target);
     const tIndx = tileArray.findIndex(el => el.id == event.target.id);  // sloppy equivalence: HTML attributes are stored as strings, and I'm being lazy.
-    console.log(tIndx);
+    // console.log(tIndx);
     const theTile = tileArray[tIndx]
 
     if (theTile.clicked) {
-      console.log("fail");
+      // console.log("fail");
       tileArray.forEach(element => {
         element.clicked = false;
       });
       this.setState({tiles: tileArray, score: 0, lost: true, headerText: "Fail!"});
     }
     else {
-      console.log("nice");
+      // console.log("nice");
       theTile.clicked = true;
       score++;
       if (hiScore <= score) {
@@ -42,11 +42,11 @@ class App extends React.Component {
       }
       this.setState({tiles: tileArray, score, hiScore, lost: false, headerText: "Nice!"});
     }
-    console.log("+++ clickHandler +++");
+    // console.log("+++ clickHandler +++");
   }
 
   render() {
-    console.log(this.state.tiles);
+    // console.log(this.state.tiles);
     return (
       <div className="App">
         <Header lost={this.state.lost} score={this.state.score} hiScore={this.state.hiScore} />

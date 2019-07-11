@@ -7,8 +7,8 @@ class Header extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log(this.props);
-        console.log(prevProps);
+        // console.log(this.props);
+        // console.log(prevProps);
         if (this.props !== prevProps) {
             if (this.props.lost) {
                 this.setState({ headerClass: "fail", headerText: "Fail!" });
