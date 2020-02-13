@@ -1,6 +1,3 @@
-body {
-  background: url(/assets/images/darkness.png)
-}
 svg {
   pointer-events: none; /* keeps the onclick target the parent div */
 }
