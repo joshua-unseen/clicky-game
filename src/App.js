@@ -31,7 +31,7 @@ class App extends React.Component {
       tileArray.forEach(element => {
         element.clicked = false;
       });
-      this.setState({tiles: tileArray, score: 0, lost: true, headerText: "Fail!"});
+      this.setState({ tiles: tileArray, score: 0, lost: true, headerText: "Fail!" });
     }
     else {
       // console.log("nice");
@@ -40,10 +40,12 @@ class App extends React.Component {
       if (hiScore <= score) {
         hiScore = score;
       }
-      this.setState({tiles: tileArray, score, hiScore, lost: false, headerText: "Nice!"});
+      this.setState({ tiles: tileArray, score, hiScore, lost: false, headerText: "Nice!" });
     }
     // console.log("+++ clickHandler +++");
   }
+
+
 
   render() {
     // console.log(this.state.tiles);
