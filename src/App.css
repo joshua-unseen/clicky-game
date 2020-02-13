@@ -1,33 +1,42 @@
-.App {
-  text-align: center;
+body {
+  background: url(/assets/images/darkness.png)
+}
+.tile {
+  box-shadow: 0px 3px 6px;
+}
+.tile:hover {
+  transform: scale(1.10);
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+@keyframes shaky {
+  0% {transform: translate(0px);}
+  25% {transform: translate(5px);}
+  75% {transform: translate(-5px);}
+  100% {transform: translate(0px);}
+}
+.shaky {
+  animation-name: shaky;
+  animation-duration: 200ms;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+@keyframes failText {
+  from {color: red}
+  to {color: inherit}
+}
+.fail {
+  animation: failText 0.5s;
+}
+@keyframes niceText {
+  from {color: green}
+  to {color: inherit}
+}
+.nice {
+  animation: niceText 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 1200px) {
+  .container {
+      max-width: 960px;
   }
 }
