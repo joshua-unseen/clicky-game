@@ -7,6 +7,9 @@ body {
 .tile:hover {
   transform: scale(1.10);
 }
+.jumbotron {
+  padding: 2rem 1rem;
+}
 
 @keyframes shaky {
   0% {transform: translate(0px);}
