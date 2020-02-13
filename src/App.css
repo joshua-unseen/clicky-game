@@ -9,6 +9,7 @@ body {
 }
 .jumbotron {
   padding: 2rem 1rem;
+  background: gold;
 }
 
 @keyframes shaky {
