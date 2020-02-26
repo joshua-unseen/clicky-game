@@ -15,7 +15,8 @@ class App extends React.Component {
     lost: false,
     won: false,
     wins: 0,
-    losses: 0
+    losses: 0,
+    seed : Date.now()
   }
 
   clickHandler = (event) => {
@@ -25,7 +26,7 @@ class App extends React.Component {
     const tileArray = this.state.tiles;
 
     // console.log(event.target);
-    console.log(tileArray.length);
+    // console.log(tileArray.length);
     const tIndx = tileArray.findIndex(el => el.id == event.target.id);  // sloppy equivalence: HTML attributes are stored as strings, and I'm being lazy.
     // console.log(tIndx);
     const theTile = tileArray[tIndx]
@@ -44,9 +45,9 @@ class App extends React.Component {
       if (hiScore <= score) {
         hiScore = score;
       }
-      console.log(score);
+      // console.log(score);
       if (score === tileArray.length) {
-        this.setState({ score, hiScore, won: true, wins: this.state.wins + 1 });
+        this.setState({ score, hiScore, won: true, wins: this.state.wins + 1, seed: Date.now() });
         tileArray.forEach(elem => {elem.clicked = false});
         this.setState({ tiles: tileArray, score: 0 });
       }
@@ -65,7 +66,7 @@ class App extends React.Component {
       <div className="App">
         <Header lost={this.state.lost} won={this.state.won} score={this.state.score} hiScore={this.state.hiScore} />
         <Banner />
-        <Layout tiles={this.state.tiles} clickHandler={this.clickHandler} lost={this.state.lost} />
+        <Layout tiles={this.state.tiles} clickHandler={this.clickHandler} lost={this.state.lost} seed={this.state.seed} />
         <Footer logo={logo} />
       </div>
     );

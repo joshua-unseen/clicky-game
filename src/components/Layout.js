@@ -8,11 +8,12 @@ function shuffleArray(array) {
     }
 }
 
-function renderTiles(tiles, clickHandler) {
+function renderTiles(tiles, clickHandler, seed) {
+    console.log(seed);
     shuffleArray(tiles);
     const tilesArray = tiles.map(tile => {
         return (
-            <Tile key={tile.id} id={tile.id} url={tile.url} clicked={tile.clicked} clickHandler={clickHandler} />
+            <Tile key={tile.id} id={tile.id} url={tile.url} clicked={tile.clicked} clickHandler={clickHandler} seed={seed} />
         );
     });
     return tilesArray;
@@ -22,7 +23,7 @@ function Layout(props) {
     return (
         <div className={"container d-flex flex-wrap justify-content-center mb-5" + (props.lost ? " shaky" : "")}>
             {/* <p>This is the tile layout</p> */}
-            {renderTiles(props.tiles, props.clickHandler)}
+            {renderTiles(props.tiles, props.clickHandler, props.seed)}
         </div>
     );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import 'jdenticon';
 
 function Tile(props) {
+    console.log(props.seed);
     return (
         // <img
         //     src={props.url + "text=" + props.id}
@@ -15,7 +16,7 @@ function Tile(props) {
             onClick={props.clickHandler}
             >
             <svg
-                data-jdenticon-value={props.id}
+                data-jdenticon-value={props.id + props.seed}
                 width="150" height="150"
             >
                 Need SVG support...
