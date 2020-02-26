@@ -13,6 +13,9 @@ class Header extends React.Component {
             if (this.props.lost) {
                 this.setState({ headerClass: "fail", headerText: "Fail!" });
             }
+            else if (this.props.won) {
+                this.setState({ headerClass: "nice", headerText: "Win!"});
+            }
             else if (this.props.score) {
                 this.setState({ headerClass: "nice", headerText: "Nice!" });
             }
