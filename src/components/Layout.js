@@ -9,7 +9,7 @@ function shuffleArray(array) {
 }
 
 function renderTiles(tiles, clickHandler, seed) {
-    console.log(seed);
+    // console.log(seed);
     shuffleArray(tiles);
     const tilesArray = tiles.map(tile => {
         return (
